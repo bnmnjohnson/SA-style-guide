@@ -1,10 +1,10 @@
 @import './partials/bourbon/app/assets/stylesheets/bourbon'; // http://bourbon.io/
-// @import './partials/bourbon/app/assets/stylesheets/bourbon-deprecated-upcoming'; 
+@import './partials/bourbon/app/assets/stylesheets/bourbon-deprecated-upcoming'; 
 
 @import './partials/layout'; // responsive grid and media queries
-@import './partials/fonts';
-@import './partials/reset';
-@import './partials/basic-style';
+@import './partials/fonts'; //fonts are in here
+@import './partials/reset'; 
+@import './partials/basic-style'; //colours are in here
 
 
 
