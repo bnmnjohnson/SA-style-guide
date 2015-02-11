@@ -5,9 +5,16 @@ var sass = require ('gulp-sass');
 var modRewrite  = require('connect-modrewrite');
 var middleware = require('middleware');
 
+
 //move assets folder to public/src/assets/
 gulp.task('assets', function(){
-	gulp.src('./build/assets/*')
+	gulp.src('./build/assets/**/*')
+	.pipe(gulp.dest('./public/src/assets/'));
+});
+
+//move assets folder to public/src/assets/
+gulp.task('asset-folders', ['assets'], function(){
+	gulp.src('./build/assets/**')
 	.pipe(gulp.dest('./public/src/assets/'));
 });
 
