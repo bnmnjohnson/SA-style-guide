@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var browserSync = require ('browser-sync');
 var bower = require ('gulp-bower');
-var sass = require ('gulp-sass');
+// var sass = require ('gulp-sass');
 var modRewrite  = require('connect-modrewrite');
 var middleware = require('middleware');
 
@@ -14,12 +14,12 @@ gulp.task('assets', function(){
 
 //move assets folder to public/src/assets/
 gulp.task('asset-folders', ['assets'], function(){
-	gulp.src('./build/assets/**')
+	gulp.src('./build/assets/*')
 	.pipe(gulp.dest('./public/src/assets/'));
 });
 
 //move .html files to public/
-gulp.task('html', ['assets'], function(){
+gulp.task('html', ['asset-folders'], function(){
 	gulp.src('./build/html/*.html')
 		.pipe(gulp.dest('./public/'));
 });
@@ -38,9 +38,9 @@ gulp.task('scripts', ['img'], function(){
 
 //compile .sass files then move the .css to /public/src/css/
 gulp.task('build', ['scripts'], function(){
-	gulp.src('./build/scss/*.scss')
-		.pipe(sass())
-		.pipe(gulp.dest('./public/src/css/'));
+	// gulp.src('./build/scss/*.scss')
+	// 	.pipe(sass())
+	// 	.pipe(gulp.dest('./public/src/css/'));
 });
 
 //look at the bower components required then move them to the lib folder
