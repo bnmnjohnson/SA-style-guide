@@ -1,45 +1,18 @@
-@import 'bourbon'; // http://bourbon.io/
+@import './partials/bourbon/app/assets/stylesheets/bourbon'; // http://bourbon.io/
+// @import './partials/bourbon/app/assets/stylesheets/bourbon-deprecated-upcoming'; 
 
 @import './partials/layout'; // responsive grid and media queries
 @import './partials/fonts';
 @import './partials/reset';
-// universal color palette 
-
-$color-1: #48B8D0; // Universal Sky Blue - Action color
-$color-2: #212121; // Black
-$color-3: #cccccc; // Dark Grey
-$color-4: #e7e7e7; // Medium Grey
-$color-5: #f7f7f7; // Light Grey
-$color-6: #ffffff; // white
-
-// state colour palette
-
-$color-nsw: #006992; // NSW Lagoon
-$color-wa: #ECA400; // WA Sand
-$color-ssa: #D93F3D; // SA Sunset
-$color-qld: #6C003F; // QLD Maroon
-$color-vic: #002772; // VIC Ocean Blue
-$color-tas: #6EBA96; // TAS Reef Green
+@import './partials/basic-style';
 
 
-// additional colors
 
-$success: #6fce72; // green
-$alert: red;  // red
+// /* -------------------------------- 
 
-// fonts
+// xBackground 
 
-$primary-font: 'adelle', serif;
-$secondary-font: 'adelle-sans', sans-serif;
-$semibold-font: 600;
-$bold-font: 700;
-$thin-font: 100;
-
-/* -------------------------------- 
-
-xBackground 
-
--------------------------------- */
+// -------------------------------- */
 
 body {
 	/* this is the page background */
@@ -150,11 +123,11 @@ header {
 	}
 }
 
-/* -------------------------------- 
+// /* -------------------------------- 
 
-xPage title 
+// xPage title 
 
--------------------------------- */
+// -------------------------------- */
 
 main > h1 {
 	color: $color-2;
@@ -166,11 +139,11 @@ main > h1 {
 	}
 }
 
-/* -------------------------------- 
+// /* -------------------------------- 
 
-xTypography 
+// xTypography 
 
--------------------------------- */
+// -------------------------------- */
 
 h1 {
 	color: $color-2;
@@ -288,11 +261,11 @@ p {
 
 
 
-/* -------------------------------- 
+// /* -------------------------------- 
 
-xButtons 
+// xButtons 
 
--------------------------------- */
+// -------------------------------- */
 
 .btn {
 	border: none;
@@ -302,7 +275,7 @@ xButtons
 		size: 1rem;
 		weight: $bold-font;
 		family: $secondary-font;
-	}
+		};
 	color: $color-6;
 	padding: 0.8em 2.012em;
 	cursor: pointer;
@@ -315,6 +288,7 @@ xButtons
 	.no-touch &:hover {
 		background: lighten($color-1, 5%);
 	}
+
 
 	&.btn-success {
 		background: $success;
@@ -349,16 +323,17 @@ xButtons
 	}
 }
 
+
 .cd-buttons .cd-box:nth-of-type(2) span {
 	/* CSS class name color */ 
 	color: $color-1;
 }
 
-/* -------------------------------- 
+// /* -------------------------------- 
 
-xIcons 
+// xIcons 
 
--------------------------------- */
+// -------------------------------- */
 
 .cd-icons li {
 	/* icons size */
@@ -535,22 +510,22 @@ select {
 	font-weight: $bold-font;
 }
 
-@import '../partials/basic-style';
 
 
 
-// Module Styling
+
+// // Module Styling
 
 #module-info {
   padding-left: 30px;
   padding-top: 10px;
   padding-bottom: 30px;
-  padding-right: 30px; }
+  padding-right: 30px; 
+}
 
 #module-info label {
   
   }
-
 
 .button {
   margin-top: 10px; }
@@ -581,7 +556,7 @@ select {
 
 .eventDate {
 	font-size: 1.5rem;
-	font-family: #secondary-font;
+	font-family: $secondary-font;
 }
 
 .eventBody {
@@ -667,12 +642,16 @@ a:hover {
 
   .eventTileContainer {
     width: 879px; } }
+
+
 @media screen and (max-width: 880px) {
   .eventTile {
     width: 300px; }
 
   .eventTileContainer {
     width: 679px; } }
+
+
 @media screen and (max-width: 680px) {
   .eventTile {
     width: 100%;
@@ -680,6 +659,8 @@ a:hover {
 
   .eventTileContainer {
     width: 80%; } }
+
+
 @media screen and (max-width: 330px) {
   .eventBody {
     padding: 22px; }
@@ -690,6 +671,8 @@ a:hover {
   .eventCta {
     margin-right: 0px;
     margin-bottom: 22px; } }
+
+
 
 #saImage {
   background-image: url("img/image3.jpg"); }

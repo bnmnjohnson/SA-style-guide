@@ -7,7 +7,7 @@ var middleware = require('middleware');
 
 //move assets folder to public/src/assets/
 gulp.task('assets', function(){
-	gulp.src('./build/assets/*/**')
+	gulp.src('./build/assets/*')
 	.pipe(gulp.dest('./public/src/assets/'));
 });
 
@@ -31,7 +31,7 @@ gulp.task('scripts', ['img'], function(){
 
 //compile .sass files then move the .css to /public/src/css/
 gulp.task('build', ['scripts'], function(){
-	gulp.src('./build/scss/*scss')
+	gulp.src('./build/scss/*.scss')
 		.pipe(sass())
 		.pipe(gulp.dest('./public/src/css/'));
 });
@@ -58,8 +58,7 @@ gulp.task('serve', function () {
 		'./public/**/*.html',
 		'./public/src/js*.js',
 		'./public/src/**/*.js',
-		'./public/src/css/*.css',
-		'./public/src/assets/**'
+		'./public/src/css/*.css'
 	];
 
     browserSync.init(files, {
