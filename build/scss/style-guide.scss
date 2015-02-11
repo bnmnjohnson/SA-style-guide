@@ -1,8 +1,8 @@
 @import 'bourbon'; // http://bourbon.io/
 
-@import '../partials/layout'; // responsive grid and media queries
-@import 'fonts';
-@import 'reset';
+@import './partials/layout'; // responsive grid and media queries
+@import './partials/fonts';
+@import './partials/reset';
 // universal color palette 
 
 $color-1: #48B8D0; // Universal Sky Blue - Action color
