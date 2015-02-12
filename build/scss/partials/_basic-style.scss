@@ -851,13 +851,12 @@ section {
 
 /* xForm section - basic style */
 
-.cd-form {
-	input[type=text],
-	.cd-input-wrapper {
+	input[type=text] {
 		margin: 1em;
 	}
 
-	.cd-input-wrapper {
+	form {
+		margin: 1em;
 		position: relative;
 		display: inline-block;
 	}
@@ -865,7 +864,6 @@ section {
 	select::-ms-expand {
       display: none;
 	}
-}
 
 @-moz-document url-prefix(){
 	/* hide custom arrow on Firefox */
